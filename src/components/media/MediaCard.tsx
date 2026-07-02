@@ -17,7 +17,7 @@ export default function MediaCard({ media }: Props) {
             <article className="overflow-hidden rounded-2xl border border-white/10 bg-[#151F2E] transition-all duration-300 hover:-translate-y-2 hover:border-sky-400/40 hover:shadow-2xl hover:shadow-sky-500/10">
                 <div className="relative overflow-hidden">
                     <img
-                        src={media.poster}
+                        src={media.poster ?? ""}
                         alt={media.title}
                         loading="lazy"
                         className="aspect-[2/3] w-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -27,7 +27,7 @@ export default function MediaCard({ media }: Props) {
 
                     <div className="absolute left-3 top-3 flex items-center gap-1 rounded-full bg-black/70 px-2.5 py-1 text-xs font-semibold text-yellow-400 backdrop-blur">
                         <Star className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
-                        {media.score?.toFixed(1) ?? "-"}
+                        {media.rating?.toFixed(1) ?? "-"}
                     </div>
 
                     <div className="absolute right-3 top-3 rounded-full bg-sky-500/90 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white">

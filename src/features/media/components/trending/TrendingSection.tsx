@@ -31,6 +31,17 @@ export default function TrendingSection({ type }: Props) {
         return null;
     }
 
+    const mediaItems = data.map((item) => ({
+        id: item.id,
+        title: item.title,
+        poster: item.poster,
+        rating: item.rating,
+        year: item.year,
+        duration: item.duration,
+        episodes: item.episodes,
+        type: item.type,
+    }));
+
     return (
         <section className="space-y-6">
             <div className="flex items-center justify-between">
@@ -40,7 +51,7 @@ export default function TrendingSection({ type }: Props) {
             </div>
 
             <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-                {data.map((media) => (
+                {mediaItems.map((media) => (
                     <MediaCard
                         key={`${media.type}-${media.id}`}
                         media={media}

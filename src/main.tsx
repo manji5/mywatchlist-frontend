@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import "@fontsource-variable/geist";
 import "./index.css";
 
 import { AuthProvider } from "src/context/AuthContext";

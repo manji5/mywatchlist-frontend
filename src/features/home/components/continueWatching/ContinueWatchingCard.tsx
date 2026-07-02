@@ -102,7 +102,7 @@ export default function ContinueWatchingCard({
                         </Button>
 
                         <Button
-                            variant="secondary"
+                            variant="outline"
                             asChild
                         >
 
