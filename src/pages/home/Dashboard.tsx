@@ -1,4 +1,4 @@
-import ContinueWatchingRow from "@/features/home/components/continuewatching/ContinueWatchingRow";
+import ContinueWatchingRow from "@/features/home/components/continueWatching/ContinueWatchingRow";
 import HomeSection from "@/features/home/components/sections/HomeSection";
 import RecommendationsComingSoon from "@/features/home/components/recommendations/RecommendationsComingSoon";
 
