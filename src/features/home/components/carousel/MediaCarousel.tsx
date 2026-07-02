@@ -2,7 +2,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
 
 import MediaCard from "@/components/media/MediaCard";
-import type { MediaCardData } from "@/features/media/types/types";
+import type { MediaCardData } from "@/types/media";
 
 interface Props {
     items: MediaCardData[];

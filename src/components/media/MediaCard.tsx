@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { CalendarDays, Star } from "lucide-react";
 
-import type { MediaCardData } from "@/features/media/types/types";
+import type { MediaCardData } from "@/types/media";
+
 
 interface Props {
     media: MediaCardData;
