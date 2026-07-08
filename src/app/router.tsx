@@ -8,7 +8,7 @@ import Login from "src/pages/auth/Login";
 import Register from "src/pages/auth/Register";
 import Search from "src/pages/media/Search";
 import Watchlist from "src/pages/user/Watchlist";
-import UserProfile from "src/pages/user/UserProfile";
+import Profile from "@/features/profile/pages/Profile";
 import NotFound from "src/pages/NotFound";
 import MediaDetail from "@/pages/media/MediaDetail";
 
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/profile/:username",
-                element: <UserProfile />,
+                element: <Profile />,
             },
             {
                 path: "/media/:type/:id",
