@@ -1,16 +1,19 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import MainLayout from "src/layouts/MainLayout";
-import AuthLayout from "src/layouts/AuthLayout";
+import MainLayout from "@/layouts/MainLayout";
+import AuthLayout from "@/layouts/AuthLayout";
 
-import Home from "src/pages/home/Home";
-import Login from "src/pages/auth/Login";
-import Register from "src/pages/auth/Register";
-import Search from "src/pages/media/Search";
-import Watchlist from "src/pages/user/Watchlist";
-import Profile from "@/features/profile/pages/Profile";
-import NotFound from "src/pages/NotFound";
+import Home from "@/pages/home/Home";
+import Login from "@/pages/auth/Login";
+import Register from "@/pages/auth/Register";
+import Search from "@/pages/media/Search";
+import Watchlist from "@/pages/user/Watchlist";
 import MediaDetail from "@/pages/media/MediaDetail";
+
+import Profile from "@/features/profile/pages/Profile";
+import Settings from "@/features/settings/pages/Settings";
+
+import NotFound from "@/pages/NotFound";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +34,10 @@ const router = createBrowserRouter([
             {
                 path: "/profile/:username",
                 element: <Profile />,
+            },
+            {
+                path: "/settings",
+                element: <Settings />,
             },
             {
                 path: "/media/:type/:id",

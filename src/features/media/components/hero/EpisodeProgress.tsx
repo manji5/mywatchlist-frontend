@@ -2,7 +2,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { Check, Minus, Plus } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/ui/button";
 
 import {
     useDecrementProgress,
@@ -200,8 +200,8 @@ export default function EpisodeProgress({
 
                 <div
                     className={`h-full rounded-full transition-all duration-500 ${completed
-                            ? "bg-emerald-500"
-                            : "bg-sky-500"
+                        ? "bg-emerald-500"
+                        : "bg-sky-500"
                         }`}
                     style={{
                         width: `${percent}%`,

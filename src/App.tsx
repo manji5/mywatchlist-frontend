@@ -1,4 +1,4 @@
-import { Toaster } from "src/components/ui/sonner";
+import { Toaster } from "@/ui/sonner";
 
 import { AppRouter } from "@/app/router";
 

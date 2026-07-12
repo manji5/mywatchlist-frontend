@@ -2,8 +2,8 @@ import { Search } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/ui/button";
+import { Input } from "@/ui/input";
 
 export default function Hero() {
     const navigate = useNavigate();

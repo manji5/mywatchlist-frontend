@@ -1,6 +1,6 @@
 import { Search } from "lucide-react";
-import { Button } from "src/components/ui/button";
-import { Input } from "src/components/ui/input";
+import { Button } from "@/ui/button";
+import { Input } from "@/ui/input";
 
 export default function Hero() {
     return (

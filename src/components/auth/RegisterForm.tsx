@@ -4,8 +4,8 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
 
-import { Button } from "src/components/ui/button";
-import { Input } from "src/components/ui/input";
+import { Button } from "@/ui/button";
+import { Input } from "@/ui/input";
 
 import { useRegister } from "src/features/auth/hooks";
 

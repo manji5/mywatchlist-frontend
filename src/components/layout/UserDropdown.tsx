@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
     ChevronDown,
+    List,
     LogOut,
     Settings,
     User,
-    List,
 } from "lucide-react";
 
 import { useAuth } from "src/hooks/useAuth";
@@ -43,7 +43,10 @@ export default function UserDropdown() {
     }
 
     return (
-        <div className="relative" ref={dropdownRef}>
+        <div
+            className="relative"
+            ref={dropdownRef}
+        >
             <button
                 type="button"
                 onClick={() => setOpen((prev) => !prev)}
@@ -59,16 +62,30 @@ export default function UserDropdown() {
 
                 <ChevronDown
                     size={16}
-                    className={`transition-transform ${open ? "rotate-180" : ""}`}
+                    className={`transition-transform ${open ? "rotate-180" : ""
+                        }`}
                 />
             </button>
 
             {open && (
-                <div className="absolute right-0 mt-3 w-56 overflow-hidden rounded-2xl border border-white/10 bg-[#101827] shadow-2xl">
+                <div className="absolute right-0 mt-3 w-60 overflow-hidden rounded-2xl border border-white/10 bg-[#101827] shadow-2xl">
+
+                    <div className="border-b border-white/10 px-4 py-4">
+
+                        <p className="font-semibold">
+                            {username}
+                        </p>
+
+                        <p className="mt-1 text-sm text-slate-400">
+                            Account
+                        </p>
+
+                    </div>
+
                     <Link
                         to={username ? `/profile/${username}` : "/"}
-                        className="flex items-center gap-3 px-4 py-3 transition hover:bg-white/10"
                         onClick={() => setOpen(false)}
+                        className="flex items-center gap-3 px-4 py-3 transition hover:bg-white/10"
                     >
                         <User size={18} />
                         Profile
@@ -76,22 +93,23 @@ export default function UserDropdown() {
 
                     <Link
                         to="/watchlist"
-                        className="flex items-center gap-3 px-4 py-3 transition hover:bg-white/10"
                         onClick={() => setOpen(false)}
+                        className="flex items-center gap-3 px-4 py-3 transition hover:bg-white/10"
                     >
                         <List size={18} />
                         My List
                     </Link>
 
-                    <button
-                        type="button"
-                        className="flex w-full items-center gap-3 px-4 py-3 text-left transition hover:bg-white/10"
+                    <Link
+                        to="/settings"
+                        onClick={() => setOpen(false)}
+                        className="flex items-center gap-3 px-4 py-3 transition hover:bg-white/10"
                     >
                         <Settings size={18} />
                         Settings
-                    </button>
+                    </Link>
 
-                    <hr className="border-white/10" />
+                    <div className="my-2 border-t border-white/10" />
 
                     <button
                         type="button"
@@ -101,6 +119,7 @@ export default function UserDropdown() {
                         <LogOut size={18} />
                         Logout
                     </button>
+
                 </div>
             )}
         </div>

@@ -1,7 +1,7 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { BookmarkPlus } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/ui/button";
 
 import { useAddWatchlist } from "../../hooks/useAddWatchlist";
 import { useUpdateStatus } from "../../hooks/useUpdateStatus";

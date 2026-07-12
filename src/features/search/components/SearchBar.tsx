@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Search } from "lucide-react";
 import { useState } from "react";
 
-import { Input } from "src/components/ui/input";
+import { Input } from "@/ui/input";
 import { useDebounce } from "src/hooks/useDebounce";
 
 import { useSearch } from "../hooks/useSearch";
